@@ -5,6 +5,9 @@ on:
     tags:
       - '[0-9]+.[0-9]+.[0-9]+'
 
+env:
+  IMAGE: zappi/celery-exporter
+
 jobs:
   github:
     runs-on: ubuntu-latest
@@ -22,8 +25,6 @@ jobs:
   docker-hub:
     needs: github
     runs-on: ubuntu-latest
-    env:
-      IMAGE: zappi/celery-exporter
     permissions:
       contents: write
       packages: write
@@ -58,6 +59,13 @@ jobs:
           annotations: ${{ steps.metadata.outputs.annotations }}
           labels: ${{ steps.metadata.outputs.labels }}
           tags: ${{ steps.metadata.outputs.tags }}
+
+  docker-hub-description:
+    needs: docker-hub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Update Description On Docker Hub Description
         uses: peter-evans/dockerhub-description@v4
         with:
