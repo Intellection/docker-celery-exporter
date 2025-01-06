@@ -1,6 +1,7 @@
 # docker-celery-exporter
 
-[![release](https://github.com/Intellection/docker-celery-exporter/actions/workflows/release.yml/badge.svg)](https://github.com/Intellection/docker-celery-exporter/actions/workflows/release.yml) [![test](https://github.com/Intellection/docker-celery-exporter/actions/workflows/test.yml/badge.svg)](https://github.com/Intellection/docker-celery-exporter/actions/workflows/test.yml)
+[![release](https://github.com/Intellection/docker-celery-exporter/actions/workflows/release.yml/badge.svg)](https://github.com/Intellection/docker-celery-exporter/actions/workflows/release.yml)
+[![test](https://github.com/Intellection/docker-celery-exporter/actions/workflows/test.yml/badge.svg)](https://github.com/Intellection/docker-celery-exporter/actions/workflows/test.yml)
 
 Docker image for [`danihodovic/celery-exporter`](https://github.com/danihodovic/celery-exporter), a Prometheus exporter for Celery metrics.
 
