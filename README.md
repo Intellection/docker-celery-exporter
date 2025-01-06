@@ -18,3 +18,21 @@ docker run --name celery-exporter zappi/celery-exporter:latest
 ```
 
 For more detailed usage documentation [see upstream](https://github.com/danihodovic/celery-exporter).
+
+## Releasing
+
+To cut a new release, follow these steps:
+
+1. Ensure your local `main` branch is up to date:
+    ```bash
+    git checkout main
+    git fetch origin main
+    ```
+2.	Create a signed tag for the new release replacing <x.y.z> with the version you’re releasing:
+    ```bash
+    git tag -s <x.y.z> -m "Version <x.y.z>"
+    ```
+3. Push the newly created tag to the remote repository:
+    ```bash
+    git push origin <x.y.z>
+    ```
