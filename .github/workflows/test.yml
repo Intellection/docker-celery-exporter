@@ -11,7 +11,7 @@ on:
 env:
   # Update this to the exact version that you want to test i.e. the packaging
   # into a Docker image.
-  VERSION: 0.10.14
+  VERSION: 0.11.0
 
 jobs:
   docker-build:
