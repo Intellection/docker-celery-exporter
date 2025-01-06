@@ -19,6 +19,25 @@ docker run --name celery-exporter zappi/celery-exporter:latest
 
 For more detailed usage documentation [see upstream](https://github.com/danihodovic/celery-exporter).
 
+## Updating
+
+Below are detailed instructions to guide contributors through the process to update the image to use a new version:
+
+1. Open the `.github/workflows/test.yml` file in your editor and locate the following section:
+    ```yaml
+    env:
+      VERSION: 0.x.0
+    ```
+2. Update the `VERSION` field to the desired version:
+    ```yaml
+    env:
+      VERSION: 0.y.0
+    ```
+3. Save the file and commit your changes with a meaningful commit message.
+4. Push your branch to GitHub and submit a PR:
+    * Your pull request will trigger the CI/CD pipeline, which will validate the updated version.
+    * Ensure the pipeline completes successfully before merging.
+
 ## Releasing
 
 To cut a new release, follow these steps:
